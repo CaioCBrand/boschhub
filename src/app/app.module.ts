@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { ProfilesListComponent } from './profiles/profiles-list/profiles-list.component';
 import { ProfileDetailComponent } from './profiles/profile-detail/profile-detail.component';
 import { routing } from './app.routing';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { routing } from './app.routing';
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule,
     HttpClientModule,
     routing

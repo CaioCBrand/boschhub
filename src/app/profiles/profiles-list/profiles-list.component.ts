@@ -18,8 +18,7 @@ export class ProfilesListComponent implements OnInit {
     private router: Router
   ) { }
 
-  goToProfile(value: string) {
-
+  goToProfile(e: any, value: string) {
     this.profilesService.getUser(value)
       .subscribe(
         data => {
