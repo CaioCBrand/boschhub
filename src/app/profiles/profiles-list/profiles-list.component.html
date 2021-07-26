@@ -1,11 +1,11 @@
 <div class="search">
-	<div class="search__holder">
-		<h1 class="main-title"><span>Bosch</span>Hub</h1>
+	<form #searchForm="ngForm" class="search__holder" (ngSubmit)="goToProfile($event, searchProfile.value)">
+		<h1 class="main-title"><span>Bosch</span>hub</h1>
 		<div class="field__holder">
 			<label class="field__label" for="searchProfile">Search for a user's profile </label>
-			<input class="field__input" type="text" id="searchProfile" placeholder="Type a name" (keyup.enter)="goToProfile(searchProfile.value)" #searchProfile />
-			<button class="btn" (click)="goToProfile(searchProfile.value)">Search</button>
+			<input class="field__input" type="text" id="searchProfile" placeholder="Type a name" #searchProfile />
+			<button class="btn" type="submit">Search</button>
 		</div>
 		<div class="message" *ngIf="!thereAreResults">We can't find the profile you're searching for! Please try again.</div>
-	</div>
+	</form>
 </div>

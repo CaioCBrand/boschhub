@@ -32,7 +32,6 @@ export class ProfileDetailComponent implements OnInit {
       .subscribe(
         data => {
           this.properties = data;
-          console.log(this.properties);
         }
     );
 
@@ -40,10 +39,8 @@ export class ProfileDetailComponent implements OnInit {
       .subscribe(
         data => {
           this.repos = data;
-          console.log(this.repos);
         }
     )
-    
   }
 
   ngOnDestroy() {
